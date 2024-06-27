@@ -12,6 +12,7 @@ dependencies:
 
   cupertino_icons: ^1.0.6
   google_fonts: ^6.2.1
+  flutter_material_design_icons: ^1.1.7447
 
 dev_dependencies:
   flutter_test:
