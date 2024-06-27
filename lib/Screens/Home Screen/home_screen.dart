@@ -1,4 +1,5 @@
 
+import 'package:facebook_clone/Home%20Features/create_post_container.dart';
 import 'package:flutter/material.dart';
 import '../../widgets/appbar.dart';
 
@@ -18,7 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
         slivers: [
           TAppbar(),
           SliverToBoxAdapter(
-            
+            child: CreatePostContainer()
           )
         ],
       )

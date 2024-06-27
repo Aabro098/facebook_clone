@@ -11,23 +11,24 @@ class CreatePostContainer extends StatelessWidget {
       padding: const EdgeInsets.all(10),
       child: Column(
         children: [
-          const Row(
+          Row(
             children: [
-              CircleAvatar(
-                radius: 30,
+              const CircleAvatar(
+                radius: 20,
                 // backgroundImage: Image(image: )
               ),
-              SizedBox(width: 8),
-              Expanded(
+              const SizedBox(width: 10),
+              const Expanded(
                 child: TextField(
                   decoration: InputDecoration.collapsed(
                     hintText: "What's on your mind ?"
                   ),
                 ),
               ),
-              Divider(height: 10, thickness: 0.5)
+              Divider(height: 15, thickness: 1, color: Colors.grey[200])
             ],
           ),
+          const SizedBox(height: 8,),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
