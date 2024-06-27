@@ -1,4 +1,6 @@
+
 import 'package:flutter/material.dart';
+import '../../widgets/appbar.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routeName = "/home";
@@ -12,13 +14,11 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-
-          ],
-        ),
-      ),
+      body: CustomScrollView(
+        slivers: [
+          TAppbar(),
+        ],
+      )
     );
   }
 }
