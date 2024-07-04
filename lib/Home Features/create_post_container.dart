@@ -1,9 +1,12 @@
+
+import 'package:facebook_clone/models/user_models.dart';
 import 'package:flutter/material.dart';
 
 import '../utils/text_button.dart';
 
 class CreatePostContainer extends StatelessWidget {
-  const CreatePostContainer({super.key});
+  final User currentUser;
+  const CreatePostContainer({super.key, required this.currentUser});
 
   @override
   Widget build(BuildContext context) {
@@ -15,8 +18,12 @@ class CreatePostContainer extends StatelessWidget {
             children: [
               const CircleAvatar(
                 radius: 20,
-                // backgroundImage: Image(image: )
+                backgroundImage: AssetImage("assets/images/monkey.jpeg"),
               ),
+              // ProfileAvatar(
+              //   imageUrl: AssetImage("assets/images/monkey.jpeg"), 
+              //   isActive: isActive
+              // ),
               const SizedBox(width: 10),
               const Expanded(
                 child: TextField(
