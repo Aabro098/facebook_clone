@@ -1,4 +1,5 @@
 import 'package:facebook_clone/App%20Styles/Color%20Style/color.dart';
+import 'package:facebook_clone/Home%20Features/profile_avatar.dart';
 import 'package:facebook_clone/models/user_models.dart';
 import 'package:flutter/material.dart';
 
@@ -23,11 +24,13 @@ class Rooms extends StatelessWidget {
               child: _CreateRoomButton(),
             );
           }
-          return Container(
-            margin: const EdgeInsets.all(2.0),
-            height: 20.0,
-            width: 20.0,
-            color: Colors.red,
+          final User user =onlineUsers[index-1];
+          return Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8),
+            child: ProfileAvatar(
+              imageUrl: user.imageUrl,
+              isActive: true,
+            ),
           );
         },
       ),
@@ -41,7 +44,7 @@ class _CreateRoomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return OutlinedButton(
-      onPressed: () => print('Create Room'),
+      onPressed: (){},
       style: ButtonStyle(
         shape: WidgetStateProperty.all<RoundedRectangleBorder>(
           RoundedRectangleBorder(

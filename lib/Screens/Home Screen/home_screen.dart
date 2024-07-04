@@ -1,7 +1,9 @@
 
+
 import 'package:flutter/material.dart';
 import '../../Home Features/create_post_container.dart';
 import '../../Home Features/rooms.dart';
+import '../../Home Features/stories.dart';
 import '../../data/data.dart';
 import '../../widgets/appbar.dart';
 
@@ -28,9 +30,16 @@ class _HomeScreenState extends State<HomeScreen> {
             sliver : SliverToBoxAdapter(
               child: Rooms(onlineUsers : onlineUsers),
             ),
+          ),
+          SliverPadding(
+            padding: const EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
+            sliver : SliverToBoxAdapter(
+              child: Stories(currentUser : currentUser , stories : stories),
+            ),
           )
         ],
       )
     );
   }
 }
+
