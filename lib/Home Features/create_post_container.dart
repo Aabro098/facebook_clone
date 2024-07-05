@@ -1,9 +1,13 @@
+
+import 'package:facebook_clone/models/user_models.dart';
 import 'package:flutter/material.dart';
 
 import '../utils/text_button.dart';
+import 'profile_avatar.dart';
 
 class CreatePostContainer extends StatelessWidget {
-  const CreatePostContainer({super.key});
+  final User currentUser;
+  const CreatePostContainer({super.key, required this.currentUser});
 
   @override
   Widget build(BuildContext context) {
@@ -13,9 +17,8 @@ class CreatePostContainer extends StatelessWidget {
         children: [
           Row(
             children: [
-              const CircleAvatar(
-                radius: 20,
-                // backgroundImage: Image(image: )
+              ProfileAvatar(
+                imageUrl: currentUser.imageUrl, 
               ),
               const SizedBox(width: 10),
               const Expanded(
