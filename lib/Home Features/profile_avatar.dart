@@ -20,9 +20,9 @@ class ProfileAvatar extends StatelessWidget {
       children: [
         CircleAvatar(
           radius: 20.0,
-          backgroundColor: TAppColor.facebookBlue,
+          backgroundColor: hasBorder ? TAppColor.facebookBlue : Colors.grey,
           child: CircleAvatar(
-            radius: hasBorder ? 17 : 20,
+            radius: 17,
             backgroundColor : Colors.grey[200],
             backgroundImage: CachedNetworkImageProvider(imageUrl),
           ),

@@ -1,7 +1,9 @@
 
-
+import 'package:facebook_clone/models/models.dart';
 import 'package:flutter/material.dart';
 import '../../Home Features/create_post_container.dart';
+import '../../Home Features/post_container.dart';
+import '../../Home Features/post_status.dart';
 import '../../Home Features/rooms.dart';
 import '../../Home Features/stories.dart';
 import '../../data/data.dart';
@@ -36,10 +38,28 @@ class _HomeScreenState extends State<HomeScreen> {
             sliver : SliverToBoxAdapter(
               child: Stories(currentUser : currentUser , stories : stories),
             ),
-          )
+          ),
+          SliverList(
+            delegate: SliverChildBuilderDelegate(
+              (context , index){
+                final Post post = posts[index];
+                return Column(
+                  children: [
+                    PostContainer(post : post),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 12.0 , vertical: 0.0),
+                      child: PostStats(post : post),
+                    )
+                  ],
+                );
+              },
+              childCount: posts.length
+            )
+          ),
         ],
       )
     );
   }
 }
 
+ 
