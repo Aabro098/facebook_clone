@@ -16,16 +16,10 @@ class PostStats extends StatelessWidget {
       children: [
         Row(
           children: [
-            Container(
-              decoration: const BoxDecoration(
-                color: TAppColor.facebookBlue,
-                 shape: BoxShape.circle
-              ),
-              child: const Icon(
-                Icons.thumb_up , 
-                size: 10.0, 
-                color: Colors.white,               
-              ),
+            const Icon(
+              Icons.thumb_up , 
+              size: 16.0, 
+              color: TAppColor.facebookBlue,               
             ),
             const SizedBox(
               width: 4.0,
@@ -49,8 +43,7 @@ class PostStats extends StatelessWidget {
         const SizedBox(
           height: 8.0,
         ),
-        Container(
-          color: Colors.white,
+        SizedBox(
           height: 28,
           child: Row(
             children: [
