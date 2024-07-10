@@ -47,7 +47,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: [
                     PostContainer(post : post),
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 12.0 , vertical: 0.0),
+                      padding: const EdgeInsets.symmetric(horizontal: 12.0),
                       child: PostStats(post : post),
                     )
                   ],
