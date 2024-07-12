@@ -1,24 +1,34 @@
-import 'package:facebook_clone/App%20Styles/Color%20Style/color.dart';
 import 'package:flutter/material.dart';
+
+import 'package:facebook_clone/App%20Styles/Color%20Style/color.dart';
 
 class CustomTabBar extends StatelessWidget {
   final List<IconData> icons;
   final int selectedIndex;
   final Function(int) onTap;
+  final bool isBottomIndicator;
   
   const CustomTabBar({
     super.key,
     required this.icons,
     required this.selectedIndex,
     required this.onTap,
+    this.isBottomIndicator = false,
   });
 
   @override
   Widget build(BuildContext context) {
     return TabBar(
       indicatorPadding: EdgeInsets.zero,
-      indicator: const BoxDecoration(
-        border: Border(
+      indicator: BoxDecoration(
+        border: isBottomIndicator 
+        ? const Border(
+          bottom: BorderSide(
+            color: TAppColor.facebookBlue,
+            width: 3.0,
+          ),
+        ) 
+        : const Border(
           top: BorderSide(
             color: TAppColor.facebookBlue,
             width: 3.0,
