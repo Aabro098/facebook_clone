@@ -76,7 +76,8 @@ class PostStats extends StatelessWidget {
               ),
             ],
           ),
-        )
+        ),
+        const SizedBox(height: 10,)
       ],
     );
   }
