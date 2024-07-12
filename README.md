@@ -1,16 +1,17 @@
-# facebook_clone
+Facebook Clone App (Responsive)
+This Facebook clone app, built using Flutter, provides a seamless and responsive social networking experience across various devices. The app features a modern and intuitive user interface, replicating the core functionalities of Facebook. Users can sign up, create profiles, post updates, like, comment, and share content. Additionally, the app includes real-time notifications, a news feed, friend requests, and messaging capabilities. Designed with responsiveness in mind, the app ensures a smooth user experience on both mobile and web platforms, adapting to different screen sizes and orientations.
 
-A new Flutter project.
+dependencies:
+  flutter:
+    sdk: flutter
 
-## Getting Started
+  cupertino_icons: ^1.0.6
+  google_fonts: ^6.2.1
+  flutter_material_design_icons: ^1.1.7447
+  cached_network_image: ^3.3.1
+  add this to your dependencies in pubspec.yaml then 'flutter pub get'
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+    assets:
+    - assets/images/ 
+    make this changes in your assets in pubspec.yaml
+    
