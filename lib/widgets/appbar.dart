@@ -23,7 +23,7 @@ class TAppbar extends StatelessWidget {
     floating: true,
     actions: [
       TIconButton(iconData: Icons.search, iconSize: 30, onPressed: (){}),
-      TIconButton(iconData: Icons.message, iconSize: 30, onPressed: (){}),
+      TIconButton(iconData: Icons.message_outlined, iconSize: 30, onPressed: (){}),
     ],
     );
   }
